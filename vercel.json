@@ -1,0 +1,7 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/lab", "destination": "/index.html" },
+    { "source": "/lab.html", "destination": "/index.html" }
+  ]
+}

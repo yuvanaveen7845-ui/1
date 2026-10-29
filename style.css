@@ -1,0 +1,168 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f6fb;
+    color: #202946;
+}
+
+header {
+    background: #202946;
+    color: white;
+    padding: 22px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+header h1 {
+    font-size: 24px;
+}
+
+header span {
+    color: #f69050;
+}
+
+.container {
+    display: flex;
+    min-height: calc(100vh - 75px);
+}
+
+.sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: white;
+    padding: 22px 15px;
+    border-right: 1px solid #e1e5ef;
+}
+
+.sidebar h3 {
+    margin: 5px 10px 15px;
+    color: #667085;
+    font-size: 14px;
+}
+
+#search {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    border: 1px solid #d8deeb;
+    border-radius: 8px;
+    outline: none;
+}
+
+#search:focus {
+    border-color: #4361ee;
+}
+
+.program-btn {
+    display: block;
+    width: 100%;
+    padding: 14px 12px;
+    margin-bottom: 7px;
+    border: none;
+    border-radius: 8px;
+    background: white;
+    color: #344054;
+    text-align: left;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.program-btn:hover,
+.program-btn.active {
+    background: #eaf0ff;
+    color: #3158c9;
+}
+
+main {
+    flex: 1;
+    min-width: 0;
+    padding: 35px;
+}
+
+.subtitle {
+    color: #667085;
+    margin: 10px 0 25px;
+}
+
+.code-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px 20px;
+    background: white;
+    border: 1px solid #e1e5ef;
+    border-bottom: none;
+    border-radius: 12px 12px 0 0;
+}
+
+.code-header span {
+    color: #667085;
+    font-size: 13px;
+}
+
+#copyBtn {
+    padding: 11px 18px;
+    border: none;
+    border-radius: 7px;
+    background: #4361ee;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#copyBtn:hover {
+    background: #304bd0;
+}
+
+pre {
+    min-height: 350px;
+    padding: 25px;
+    overflow: auto;
+    background: #171d2e;
+    color: #e5e7eb;
+    border-radius: 0 0 12px 12px;
+    font-size: 14px;
+    line-height: 1.8;
+    white-space: pre;
+}
+
+code {
+    font-family: Consolas, monospace;
+}
+
+.hint {
+    margin-top: 18px;
+    color: #667085;
+    font-size: 13px;
+}
+
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        width: 100%;
+        border-right: none;
+        border-bottom: 1px solid #e1e5ef;
+    }
+
+    main {
+        padding: 20px 15px;
+    }
+
+    header {
+        padding: 20px;
+    }
+}

@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DL Lab Programs</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <h1>DL <span>LAB</span> PROGRAMS</h1>
+        <p>HTML · CSS · JavaScript</p>
+    </header>
+
+    <div class="container">
+        <aside class="sidebar">
+            <h3>PROGRAM LIBRARY</h3>
+            <input type="text" id="search"
+                placeholder="Search programs...">
+            <div id="programList"></div>
+        </aside>
+
+        <main>
+            <h2 id="programTitle">Program 1</h2>
+            <p id="programDescription" class="subtitle">
+                Simple HTML Web Page
+            </p>
+
+            <div class="code-header">
+                <span id="codeLanguage">HTML SOURCE CODE</span>
+                <button id="copyBtn">📋 Copy Code</button>
+            </div>
+
+            <pre><code id="codeDisplay"></code></pre>
+            <p id="copyStatus" class="hint">
+                Select a program to view its code.
+            </p>
+        </main>
+    </div>
+</body>
+</html>
