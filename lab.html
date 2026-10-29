@@ -1,42 +1,99 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>DL Lab Programs</title>
+    <title>DL Lab Programs — Deep Learning Laboratory</title>
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
 <body>
     <header>
-        <h1>DL <span>LAB</span> PROGRAMS</h1>
-        <p>HTML · CSS · JavaScript</p>
+        <div class="header-brand">
+            <h1>DL <span>LAB</span> PROGRAMS</h1>
+            <p class="header-sub">Deep Learning Laboratory · 10 Experiments</p>
+        </div>
+        <div class="header-meta">
+            <span class="meta-pill">Big Code & Small Code Side-by-Side</span>
+        </div>
     </header>
 
     <div class="container">
         <aside class="sidebar">
-            <h3>PROGRAM LIBRARY</h3>
-            <input type="text" id="search"
-                placeholder="Search programs...">
+            <div class="sidebar-header">
+                <h3>PROGRAM LIBRARY</h3>
+                <span class="count-badge" id="programCountTag">10</span>
+            </div>
+            <div class="search-wrapper">
+                <input type="text" id="search" placeholder="Search experiments...">
+            </div>
             <div id="programList"></div>
         </aside>
 
         <main>
-            <h2 id="programTitle">Program 1</h2>
-            <p id="programDescription" class="subtitle">
-                Simple HTML Web Page
-            </p>
+            <div class="main-top">
+                <div class="program-info">
+                    <div class="title-row">
+                        <span class="experiment-pill" id="experimentBadge">EXP 1</span>
+                        <h2 id="programTitle">Program 1</h2>
+                    </div>
+                    <p id="programDescription" class="subtitle">
+                        Supervised Learning Classification
+                    </p>
+                </div>
 
-            <div class="code-header">
-                <span id="codeLanguage">HTML SOURCE CODE</span>
-                <button id="copyBtn">📋 Copy Code</button>
+                <div class="view-controls">
+                    <span class="view-label">View:</span>
+                    <div class="view-switcher" role="group" aria-label="Code View Mode">
+                        <button class="view-btn active" data-view="split" id="viewSplitBtn" title="Side-by-side view">
+                            ⊞ Side by Side
+                        </button>
+                        <button class="view-btn" data-view="big" id="viewBigBtn" title="Big Code only">
+                            ◀ Big Code
+                        </button>
+                        <button class="view-btn" data-view="small" id="viewSmallBtn" title="Small Code only">
+                            ▶ Small Code
+                        </button>
+                    </div>
+                </div>
             </div>
 
-            <pre><code id="codeDisplay"></code></pre>
-            <p id="copyStatus" class="hint">
-                Select a program to view its code.
-            </p>
+            <!-- Side-by-side comparison grid -->
+            <div class="code-comparison-grid view-mode-split" id="codeComparisonGrid">
+                <!-- Left: Big Code -->
+                <div class="code-card big-card" id="bigCard">
+                    <div class="code-header">
+                        <div class="code-header-left">
+                            <span class="code-badge badge-big">BIG CODE</span>
+                            <span class="code-label-sub">Full / Standard Implementation</span>
+                        </div>
+                        <button id="copyBigBtn" class="copy-btn copy-btn-big" title="Copy Big Code">
+                            📋 Copy Big Code
+                        </button>
+                    </div>
+                    <pre><code id="bigCodeDisplay"></code></pre>
+                </div>
+
+                <!-- Right: Small Code -->
+                <div class="code-card small-card" id="smallCard">
+                    <div class="code-header">
+                        <div class="code-header-left">
+                            <span class="code-badge badge-small">SMALL CODE</span>
+                            <span class="code-label-sub">Short / Practical Quick Code</span>
+                        </div>
+                        <button id="copySmallBtn" class="copy-btn copy-btn-small" title="Copy Small Code">
+                            📋 Copy Small Code
+                        </button>
+                    </div>
+                    <pre><code id="smallCodeDisplay"></code></pre>
+                </div>
+            </div>
+
+            <div class="footer-status">
+                <p id="copyStatus" class="hint">
+                    Select an experiment. Click <strong>Copy Big Code</strong> or <strong>Copy Small Code</strong> to copy to clipboard.
+                </p>
+            </div>
         </main>
     </div>
 </body>
