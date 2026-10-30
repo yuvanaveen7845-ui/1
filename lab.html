@@ -14,7 +14,7 @@
             <p class="header-sub">Deep Learning Laboratory · 10 Experiments</p>
         </div>
         <div class="header-meta">
-            <span class="meta-pill">Big Code & Small Code Side-by-Side</span>
+            <span class="meta-pill">Big Code · Small Code · New Code</span>
         </div>
     </header>
 
@@ -45,20 +45,23 @@
                 <div class="view-controls">
                     <span class="view-label">View:</span>
                     <div class="view-switcher" role="group" aria-label="Code View Mode">
-                        <button class="view-btn active" data-view="split" id="viewSplitBtn" title="Side-by-side view">
-                            ⊞ Side by Side
+                        <button class="view-btn active" data-view="split" id="viewSplitBtn" title="All Codes side-by-side">
+                            ⊞ All Codes
                         </button>
                         <button class="view-btn" data-view="big" id="viewBigBtn" title="Big Code only">
                             ◀ Big Code
                         </button>
                         <button class="view-btn" data-view="small" id="viewSmallBtn" title="Small Code only">
-                            ▶ Small Code
+                            ◆ Small Code
+                        </button>
+                        <button class="view-btn" data-view="new" id="viewNewBtn" title="New Code only">
+                            ★ New Code
                         </button>
                     </div>
                 </div>
             </div>
 
-            <!-- Side-by-side comparison grid -->
+            <!-- Comparison grid with Big, Small, and New Code cards -->
             <div class="code-comparison-grid view-mode-split" id="codeComparisonGrid">
                 <!-- Left: Big Code -->
                 <div class="code-card big-card" id="bigCard">
@@ -74,7 +77,7 @@
                     <pre><code id="bigCodeDisplay"></code></pre>
                 </div>
 
-                <!-- Right: Small Code -->
+                <!-- Middle: Small Code -->
                 <div class="code-card small-card" id="smallCard">
                     <div class="code-header">
                         <div class="code-header-left">
@@ -87,11 +90,25 @@
                     </div>
                     <pre><code id="smallCodeDisplay"></code></pre>
                 </div>
+
+                <!-- Right: New Code -->
+                <div class="code-card new-card" id="newCard">
+                    <div class="code-header">
+                        <div class="code-header-left">
+                            <span class="code-badge badge-new">NEW CODE</span>
+                            <span class="code-label-sub">Lab Manual / Concise Implementation</span>
+                        </div>
+                        <button id="copyNewBtn" class="copy-btn copy-btn-new" title="Copy New Code">
+                            📋 Copy New Code
+                        </button>
+                    </div>
+                    <pre><code id="newCodeDisplay"></code></pre>
+                </div>
             </div>
 
             <div class="footer-status">
                 <p id="copyStatus" class="hint">
-                    Select an experiment. Click <strong>Copy Big Code</strong> or <strong>Copy Small Code</strong> to copy to clipboard.
+                    Select an experiment. Click <strong>Copy Big Code</strong>, <strong>Copy Small Code</strong>, or <strong>Copy New Code</strong> to copy to clipboard.
                 </p>
             </div>
         </main>
